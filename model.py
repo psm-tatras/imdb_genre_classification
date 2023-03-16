@@ -84,10 +84,10 @@ class AttentionClassifier():
         decoder_s = tf.constant(0.1, shape=[batch_size, attention_dim])
         context_vector, attention_score = self.attention_layer(encoding_h, decoder_s,input_mask)
         prob = self.classifier(context_vector)  # N x nb_classes
-        return prob
+        return prob,attention_score
 
     def evaluate_step(self,texts,labels):
-        prob_vector = self.predict(texts)
+        prob_vector,a_score = self.predict(texts)
         loss = tf.reduce_mean(tf.keras.losses.categorical_crossentropy(labels, prob_vector))
         preds = tf.argmax(prob_vector, axis=-1)
         truths = tf.argmax(labels, axis=-1)

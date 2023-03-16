@@ -1,9 +1,10 @@
 hub_preprocessor_model = "https://tfhub.dev/tensorflow/bert_en_uncased_preprocess/3"
 hub_transformer_model = "https://tfhub.dev/tensorflow/small_bert/bert_en_uncased_L-4_H-128_A-2/2"
-train_csv_file = "data/imdb_genre_train.csv"
-label2ind_json = "data/label2ind.json"
-ind2label_json = "data/ind2label.json"
-attention_dim = 128 # should come from transformer dim
-train_pkl = "data/train.pkl"
-test_pkl = "data/test.pkl"
-validation_pkl = "data/validation.pkl"
+data_root = ""
+train_csv_file = "%s/imdb_genre_train.csv" % data_root
+label2ind_json = "%s/label2ind.json" % data_root
+ind2label_json = "%s/ind2label.json" % data_root
+attention_dim = 128  # should come from transformer dim
+train_pkl = "%s/train.pkl" % data_root
+test_pkl = "%s/test.pkl" % data_root
+validation_pkl = "%s/validation.pkl" % data_root
