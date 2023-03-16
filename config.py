@@ -4,3 +4,6 @@ train_csv_file = "data/imdb_genre_train.csv"
 label2ind_json = "data/label2ind.json"
 ind2label_json = "data/ind2label.json"
 attention_dim = 128 # should come from transformer dim
+train_pkl = "data/train.pkl"
+test_pkl = "data/test.pkl"
+validation_pkl = "data/validation.pkl"
