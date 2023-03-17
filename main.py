@@ -19,5 +19,5 @@ print("Total %d classes"%nc)
 # make a model
 model = AttentionClassifier(nc)
 print("Model created")
-model.load_model("model/")
+# model.load_model("model/")
 model.fit(x_train,y_train,label2ind,validation_data=[x_val,y_val])
